@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import './App.css';
+import Dashboard from './components/Dashboard';
 
 const App = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Routes>
+          <Route path="/" element={<Dashboard />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </Router>
